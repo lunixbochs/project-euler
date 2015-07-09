@@ -1,0 +1,6 @@
+0->B
+For(A, 1, 999)
+If mod(A, 3) = 0 or mod(A, 5) = 0
+B + A -> B
+End
+Disp B
