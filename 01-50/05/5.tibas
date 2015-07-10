@@ -1,0 +1,1 @@
+Disp lcm(seq(I, I, 1, 20), 1)

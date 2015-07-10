@@ -1,0 +1,14 @@
+120000->L
+L->dim(l1)
+0->N
+For(I, 2, L)
+    If l1(I)
+        Continue
+    N + 1 -> N
+    If N = 10001
+        Break
+    For(J, I, L, I)
+        1->l1(J)
+    End
+End
+Disp I

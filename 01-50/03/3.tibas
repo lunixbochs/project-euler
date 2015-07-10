@@ -1,0 +1,12 @@
+600851475143->N
+For(A, 2, sqrt(N))
+    If mod(N, A) = 0 Then
+        For(C, 2, sqrt(A))
+            If mod(A, C) = 0
+                Break
+        End
+        If C >= sqrt(A) Then
+            Disp A
+        End
+    End
+End

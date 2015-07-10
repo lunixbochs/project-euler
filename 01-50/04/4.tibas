@@ -1,0 +1,29 @@
+For(A, 1000, 100, -1)
+    For(B, 1000, A, -1)
+        "int to list
+        {0, 0, 0, 0, 0, 0, 0}->l1
+        A * B -> C
+        If C < P
+            Break
+        dim(l1) -> I
+        While C
+            mod(C, 10)->l1(I)
+            I - 1 -> I
+            iPart(C / 10) -> C
+        End
+        "palindrome check
+        I->S
+        dim(l1) - S -> L
+        ceiling(L / 2) -> M
+        For(I, 1, M)
+            If l1(S + I) ~= l1(dim(l1) - I + 1)
+            Then
+                0->I
+                Break
+            End
+        End
+        If I > 0
+            max(A * B, P)->P
+    End
+End
+Disp P

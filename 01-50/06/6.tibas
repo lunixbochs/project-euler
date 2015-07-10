@@ -1,0 +1,6 @@
+0->S
+For(I, 1, 100)
+    S + I ^ 2 -> S
+End
+sum(seq(I, I, 1, 100)) ^ 2 -> Q
+Disp abs(S - Q)
