@@ -1,0 +1,12 @@
+2000001->L
+L->dim(l1)
+0->S
+For(I, 2, L)
+    If l1(I)
+        Continue
+    S + I -> S
+    For(J, I, L, I)
+        1->l1(J)
+    End
+End
+Disp S

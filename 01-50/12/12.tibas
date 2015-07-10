@@ -1,0 +1,21 @@
+0->T
+1->A
+While 1
+    T + A -> T
+    A + 1 -> A
+
+    Disp T
+    "count divisors
+    0->N
+    For(I, 1, sqrt(T) - 1)
+        If mod(T, I) = 0
+            N + 2 -> N
+    End
+    If I = sqrt(T)
+        N + 1 -> N
+    If N > 500
+    Then
+        Disp T
+        Break
+    End
+End

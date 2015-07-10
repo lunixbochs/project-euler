@@ -1,0 +1,13 @@
+For(A, 1, 1000)
+    For(B, 1, 1000)
+        sqrt(A ^ 2 + B ^ 2) -> C
+        If A + B + C = 1000
+        Then
+            Disp A * B * C
+            Return
+        Else
+            If A + B + C > 1000
+            Break
+        End
+    End
+End
