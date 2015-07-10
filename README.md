@@ -19,3 +19,13 @@ Language notes:
  - `.swift` is Swift. Run with `swiftc <file.swift>; ./<file>`
  - `.m` is Objective-C. Run with `gcc -framework Foundation <file.m>; ./a.out`
  - `.rb` is Ruby. Run with `ruby <file.rb>`
+ - `.cob` is Cobol (OpenCobol). Run with `cobc -x <file.cob>; ./<file>`
+ - `.lisp` is CLisp. Run with `clisp <file.lisp>`.
+ - `.hs` is Haskell. Run with `ghc <file.hs>; ./<file>`
+ - `.erl` is Erlang + escript shebang. Run with `./<file>`
+ - `.cs` is C#. Run with `mcs <file.cs>; mono <file.exe>`
+ - `.adb` is Ada. Run with `gnatmake euler.adb; ./euler`
+ - `.bat` is Windows Batch. Run `wine cmd`, then `<file.bat>`
+ - `.fs` is Forth. Run `gforth <name.fs>`
+ - `.coffee` is CoffeeScript. Run `coffee <name.coffee>`
+ - `.rs` is Rust. Run with `rustc <name.rs>; ./<name>`
