@@ -1,7 +1,3 @@
-Original Project Euler solutions in more languages than you can shake a compiler at.
-
-Languages:
-
 | lang           | file           | how to run                                  | deps                                                     |
 |----------------|----------------|---------------------------------------------|----------------------------------------------------------|
 | ActionScript 3 | `.as`          | `redbean <file.as>`                         | [RedTamarin](http://redtamarin.com/)                     |
