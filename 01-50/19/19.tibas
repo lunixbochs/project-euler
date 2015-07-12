@@ -1,0 +1,8 @@
+0->S
+For(Y, 1901, 2000)
+    For(M, 1, 12)
+        If dayOfWk(Y, M, 1) = 1
+            S + 1 -> S
+    End
+End
+Disp S

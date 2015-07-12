@@ -1,0 +1,47 @@
+0->X
+For(T, 1, 10000)
+    "sum divisors
+    0->S
+    sqrt(T)->Q
+    For(I, 1, Q)
+        If mod(T, I) = 0
+        Then
+            S + I -> S
+            If I < Q and I > 1
+                S + T / I -> S
+        End
+    End
+    "check amicability
+    If S ~= T
+    Then
+        0->A
+        sqrt(S)->Q
+        For(I, 1, Q)
+            If mod(S, I) = 0
+            Then
+                A + I -> A
+                If I < Q and I > 1
+                    A + S / I -> A
+            End
+        End
+        "amicable
+        If A = T
+        Then
+            "check for duplicates
+            For(I, 1, dim(lAMICABLE))
+                If lAMICABLE(I) = S
+                Then
+                    0->A
+                    Break
+                End
+            End
+            "add to the list
+            If A = T
+            Then
+                augment(lAMICABLE, {T, S}) -> lAMICABLE
+                T + S + X -> X
+            End
+        End
+    End
+End
+Disp X

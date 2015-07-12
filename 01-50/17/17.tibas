@@ -1,0 +1,40 @@
+0->S
+{6, 6, 5, 5, 5, 7, 6, 6}->lTWENTIES
+{3, 6, 6, 8, 8, 7, 7, 9, 8, 8}->lTEENS
+{3, 3, 5, 4, 4, 3, 5, 5, 4}->lONES
+For(I, 1, 1000)
+    0->L
+    If I >= 20
+    Then
+        If I = 1000
+        Then
+            11 -> L
+            0 -> I
+        End
+        If I >= 100
+        Then
+            L + lONES(floor(I / 100)) -> L
+            mod(I, 100) -> I
+            L + 7 -> L
+            If I > 0
+            L + 3 -> L
+        End
+        If I >= 20
+        Then
+            L + lTWENTIES(floor((I - 10) / 10)) -> L
+            mod(I, 10) -> I
+        End
+    End
+    If I >= 10 and I < 20
+    Then
+        L + lTEENS(I - 9) -> L
+    Else
+        mod(I, 10)->O
+        If O > 0
+        Then
+            L + lONES(O) -> L
+        End
+    End
+    S + L -> S
+End
+Disp S

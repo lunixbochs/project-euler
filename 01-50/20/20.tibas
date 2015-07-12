@@ -1,0 +1,8 @@
+100! -> N
+0->S
+While N
+    mod(N, 10) -> M
+    S + M -> S
+    iPart(N / 10) -> N
+End
+Disp S
