@@ -1,0 +1,22 @@
+20->W
+20->H
+
+{W, H}->dim([A])
+For(X, 1, 20)
+    For(Y, 1, 20)
+        If X = 1 or Y = 1
+        Then
+            1 -> [A](Y, X)
+        Else
+            If X > Y
+            Then
+                [A](Y, X - 1) + [A](Y - 1, X) -> [A](Y, X)
+            End
+            If X = Y
+            Then
+                [A](Y - 1, X) * 2 -> [A](Y, X)
+            End
+        End
+    End
+End
+Disp [A](W, H)

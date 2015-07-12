@@ -1,0 +1,8 @@
+0->S
+2 ^ 1000 -> N
+While N
+    mod(N, 10) -> M
+    S + M -> S
+    iPart(N / 10) -> N
+End
+Disp S

@@ -1,0 +1,23 @@
+0 -> B
+0 -> C
+For(I, 0, 1000000)
+    Disp I
+    I -> N
+    1 -> L
+    While N > 1
+        While mod(N, 2) = 1
+            (3 * N + 1) / 2 -> N
+            L + 2 -> L
+        End
+        While mod(N, 2) = 0
+            N / 2 -> N
+            L + 1 -> L
+        End
+    End
+    If L > B
+    Then
+        L -> B
+        I -> C
+    End
+End
+Disp B, L
