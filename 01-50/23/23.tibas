@@ -1,0 +1,41 @@
+28123 -> dim(lABUNDANT)
+28123 * 2 -> dim(lSUMS)
+
+Disp "phase 1"
+"check for abundant number (sum(factors) > N)
+For(I, 1, 28123)
+    0->S
+    sqrt(I) -> Q
+    For(F, 1, Q)
+        If mod(I, F) = 0
+        Then
+            S + F -> S
+            If F < Q and F > 1
+                S + (I/F) -> S
+        End
+    End
+    If S > I
+        1->lABUNDANT(I)
+End
+
+Disp "phase 2"
+"calculate sums of abundant numbers
+For(I, 1, 28123)
+    Disp I
+    If not(lABUNDANT(I))
+        Continue
+    For(J, I, 28123)
+        If lABUNDANT(J)
+            1->lSUMS(I + J)
+        If I + J > 28123
+            Break
+    End
+End
+
+Disp "phase 3"
+0->S
+For(I, 1, 28123)
+    If lSUMS(I) = 0
+        S + I -> S
+End
+Disp S
