@@ -1,6 +1,6 @@
 using System;
  
-public class HelloWorld {
+public class Euler {
     static public void Main() {
         int sum = 0;
         for (int i = 0; i < 1000; i++) {
