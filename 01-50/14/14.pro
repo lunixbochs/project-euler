@@ -13,6 +13,8 @@ collatz(N, Chain, Result) :-
 
 main(_) :-
     numlist(1, 1000000, NL),
-    maplist(collatz, NL, X),
-    max_list(X, Max),
-    write(Max), nl.
+    maplist(collatz, NL, CL),
+    max_list(CL, Max),
+    nth0(Index, CL, Max),
+    nth0(Index, NL, Ans),
+    write(Ans), nl.
