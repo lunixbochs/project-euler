@@ -1,10 +1,10 @@
 #!/usr/bin/env swipl -qg main -s
 
-solve(X, O) :-
-    (0 is X mod 3; 0 is X mod 5), O is X; O is 0.
+mult35(Start, End, X) :-
+    between(Start, End, X),
+    (X mod 3 =:= 0; X mod 5 =:= 0).
 
 main(_) :-
-    numlist(1, 999, NL),
-    maplist(solve, NL, Result),
-    sumlist(Result, Sum),
+    setof(X, mult35(1, 999, X), XL),
+    sum_list(XL, Sum),
     write(Sum), nl.
