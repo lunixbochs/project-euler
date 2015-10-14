@@ -31,9 +31,11 @@ nospace_length(S, Length) :-
     maplist(atom_length, Words, Lengths),
     sum_list(Lengths, Length).
 
+solve(Start, End, Length) :-
+    between(Start, End, N),
+    num_word(N, Word),
+    nospace_length(Word, Length).
+
 main(_) :-
-    numlist(1, 1000, NL),
-    maplist(num_word, NL, WL),
-    maplist(nospace_length, WL, LL),
-    sum_list(LL, O),
-    write(O), nl.
+    aggregate(sum(Length), solve(1, 1000, Length), Ans),
+    write(Ans), nl.

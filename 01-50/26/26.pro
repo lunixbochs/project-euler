@@ -16,10 +16,11 @@ rlen(D, L) :-
     format(atom(Ns), '~2000f', [N]),
     rlen(2, Ns, L).
 
-solve(X) :-
-    numlist(1, 1000, NL),
-    maplist(rlen, NL, Lengths),
-    max_list(Lengths, X).
+rlen_bound(Start, End, Length) :-
+    between(Start, End, D),
+    rlen(D, Length).
+
+solve(X) :- aggregate(max(L), rlen_bound(1, 1000, L), X).
 
 main(_) :-
     solve(X),
