@@ -1,9 +1,9 @@
-20->W
-20->H
+21->W
+21->H
 
 {W, H}->dim([A])
-For(X, 1, 20)
-    For(Y, 1, 20)
+For(X, 1, W)
+    For(Y, 1, H)
         If X = 1 or Y = 1
         Then
             1 -> [A](Y, X)

@@ -91,5 +91,5 @@ coord_2d((X, Y), (W, H), L, Result) :-
 coord_2d((0, 0), (_, _), L, Result) :- Result = [[0, 0]|L].
 
 main(_) :-
-    path0((20, 20), R),
+    path0((21, 21), R),
     write(R), nl.
