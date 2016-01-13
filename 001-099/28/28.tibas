@@ -1,0 +1,10 @@
+1->A
+1001*1001->L
+While A <= L
+    A+D->A
+    A+S->S
+    If mod(I, 4) = 0
+    D+2->D
+    I+1->I
+End
+Disp S
