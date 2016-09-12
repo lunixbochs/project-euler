@@ -1,10 +1,8 @@
 #!/usr/bin/env swipl -G32g -Oqg main -s
 
 triangle(N) :-
-    X is N * 2,
-    A is floor(sqrt(X)), B is ceil(sqrt(X)),
-    A =:= B - 1,
-    A / 2 * B =:= N.
+    X is (sqrt(8 * N + 1) - 1) / 2,
+    X =:= round(X).
 
 codemap(C, N) :- N is C - 64.
 
