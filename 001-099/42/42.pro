@@ -1,11 +1,10 @@
 #!/usr/bin/env swipl -G32g -Oqg main -s
 
-triangle(N) :- triangle(N, 1).
-triangle(N, I) :-
-    X is (I * 0.5) * (I + 1),
-    triangle1(N, X, I).
-triangle1(N, X, _) :- N =:= X.
-triangle1(N, X, I) :- N > X, I1 is I + 1, triangle(N, I1).
+triangle(N) :-
+    X is N * 2,
+    A is floor(sqrt(X)), B is ceil(sqrt(X)),
+    A =:= B - 1,
+    A / 2 * B =:= N.
 
 codemap(C, N) :- N is C - 64.
 
