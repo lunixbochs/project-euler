@@ -43,7 +43,6 @@ prime_sieve(Num, Limit, Result) :-
     prime_sieve(2, Limit, Num, [], [], Result).
 prime_sieve(N, Limit, Num, Primes, Sieve, Result) :-
     not(member(N, Sieve)), !,
-    write(['not member', N]), nl,
     multiples(N, Limit, Multiples),
     length(Primes, X),
     ((X = Num, Result = Primes); (
@@ -56,7 +55,7 @@ prime_sieve(N, Limit, Num, Primes, Sieve, Result) :-
     prime_sieve(N1, Limit, Num, Primes, Sieve, Result).
 
 main(_) :-
-    prime_sieve(10001, 120000, Result),
-    % generate_primes(10001, Result),
+    /* prime_sieve(10001, 120000, Result), */
+    generate_primes(10001, Result),
     member(N, Result),
     write(N), nl.
