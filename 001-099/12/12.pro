@@ -16,6 +16,5 @@ main(_) :-
     between(1, inf, N),
     triangle(N, T),
     aggregate_all(sum(1), factor(T, _), A),
-    write([N, T, A]), nl,
     A > 500,
     write(T), nl.
