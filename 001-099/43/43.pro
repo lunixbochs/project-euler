@@ -11,8 +11,7 @@ pandigital_substr(N) :-
     maplist(atom_number, AL, NL),
     permutation(AL, PL),
     maplist(divsub(PL), [2, 3, 4, 5, 6, 7, 8], [2, 3, 5, 7, 11, 13, 17]),
-    number_chars(N, PL),
-    write(N), nl.
+    number_chars(N, PL).
 
 solve(X) :-
     aggregate(sum(N), pandigital_substr(N), X).
