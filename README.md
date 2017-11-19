@@ -19,6 +19,7 @@
 | Objective-C    | `.m`           | `gcc -framework Foundation file.m; ./a.out` | Objective-C runtime, CoreFoundation                      |
 | Perl 5.x       | `.pl`          | `perl <file.pl>`                            | Perl 5.x                                                 |
 | PHP 5.x        | `.php`         | `php <file.php>`                            | PHP 5.x                                                  |
+| Pony           | `.pony`        | `ponyc; ./<file>`                           | [Pony](https://ponylang.org)                             |
 | Prolog         | `.pro`         | `./file.pro`                                | [SWI-Prolog](http://www.swi-prolog.org/)                 |
 | Python 2.7     | `.py`          | `python <file.py>`                          | Python 2.7                                               |
 | Ruby           | `.rb`          | `ruby <file.rb>`                            | Ruby                                                     |
